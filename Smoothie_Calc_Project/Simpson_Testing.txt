@@ -1,0 +1,17 @@
+During the creation of the program, continuous procedural testing of the program was performed.
+This testing was conducted by running the program as elements were created.
+Any parts of the program that produced unintended results or errors within the program were noted.
+After the completion of the program, a regimented testing strategy was implemented.
+Any errors that were present in the program while all of the code was implemented were noted and recorded for analysis.
+Two main issues, including an abnormally large return value and a segmentation fault reported by the debugging menu were observed.
+From there, elements in the code were commented out, from a top-level to a lower-level functionality.
+This was done until the errors were no longer present.
+When the issues were removed by commenting, the more recently commented out lines were itentified to bbe potentially causing errors.
+After the error-causing lines and related lines were identified, they were edited and altered until potential bugs and issues were resolved.
+In a final testing strench in the development of the program, a printf statement to the console was implemented after every fscanf call.
+These printf statements after the fscanf statements and their assignmentments could help to identify if there was an error in saving data to a variable or pointer.
+Finally, once all known issues were addressed, multiple test cases were developped to run tests on the code.
+Two cases were developped to give proper and intended outputs, while another test document was created to intentionally give bad data.
+This was done to see how the code might handle errors in the read data, and to test the stability of the program.
+Should the program generate a proper output from the normal documents and be stable from the intentionally bad documents, the program is considered a success.
+

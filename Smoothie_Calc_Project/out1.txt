@@ -1,0 +1,14 @@
+Store #1
+yogurt 1.666667
+chocolate 3.656566
+vanilla 7.313131
+rasperry 5.323232
+cream 6.040404
+
+Store #2
+yogurt 1.000000
+chocolate 0.909091
+vanilla 2.318182
+rasperry 3.409091
+cream 1.363636
+

@@ -1,0 +1,14 @@
+Store #1
+milk 1.000000
+cinnamon 1.928571
+greens 1.285714
+berries 2.285714
+juice 0.500000
+
+Store #2
+yogurt 4.200000
+cinnamon 1.000000
+greens 3.000000
+berries 3.000000
+juice 2.800000
+
