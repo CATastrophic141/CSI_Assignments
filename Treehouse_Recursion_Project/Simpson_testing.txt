@@ -1,0 +1,15 @@
+Rylan Simpson. Sept 27, 2020.
+
+During the creation of the program,
+ for each major development milestone, the program was compiled to ensure
+ there were not compilation issues.
+Upon the completion of the program,
+ the debugging tool was utelized to detect any present segmentation faults.
+For the removal of remaining bugs,
+ print statements detailing the program's current status with a position code
+ were placed for each major step in the program's runtime.
+During the development and debugging process, a simple "in" file with a single test case
+ and two sets of coorinates were known, with a simple expected value to be returned from the program
+In the final testing phase of the program, an "in" file with 3 separate test cases was developped
+ This test file included increasingly larger test cases -ending with 8 connections-,
+ and randomly generated coordinate values.
