@@ -1,0 +1,9 @@
+As the code was being develloped, console printing statements were used to verify that the proper values were present.
+This value printing strategy was repeated for each major development of the code until a compulation or system printing error had occured.
+Once a error occured, the debugging system of the JetBrains CLion IDE was used to track what went wrong in the code.
+Most errors that occured were either improper/loss assignments or segmentation faults.
+To identify what lines caused the errors, the debugging trace system paired in conjunction with commenting out every other block of code was used.
+This systematic pairing of printing and line-by-line debugging was used to test the validity of the code until the code was completed
+
+To verify that the code's output and input functionality allowed for consitent succes, test cases similar to the sample test case were develloped.
+These test cases will verify that the code is robust against smaller alterations in input.

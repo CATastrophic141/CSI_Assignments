@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rylan/OneDrive/Desktop/School/CCodes/Monster_Execution_Project/main.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+
