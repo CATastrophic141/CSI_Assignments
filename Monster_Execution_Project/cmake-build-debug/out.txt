@@ -1,37 +1,73 @@
 Initial nonempty lists status
-1 12 11 10 9 8 7 6 5 4 3 2 1
-2 6 5 4 3 2 1
-3 9 8 7 6 5 4 3 2 1
-4 8 7 6 5 4 3 2 1
-7 7 6 5 4 3 2 1
+1 5 4 3 2 1
+2 2 1
+3 3 2 1
+4 6 5 4 3 2 1
+5 4 3 2 1
+6 8 7 6 5 4 3 2 1
+7 3 2 1
+8 9 8 7 6 5 4 3 2 1
+9 7 6 5 4 3 2 1
+10 10 9 8 7 6 5 4 3 2 1
 
 After ordering nonempty lists status
-1 1 2 3 4 5 6 7 8 9 10 11 12
-2 1 2 3 4 5 6
-3 1 2 3 4 5 6 7 8 9
-4 1 2 3 4 5 6 7 8
-7 1 2 3 4 5 6 7
+1 1 2 3 4 5
+2 1 2
+3 1 2 3
+4 1 2 3 4 5 6
+5 1 2 3 4
+6 1 2 3 4 5 6 7 8
+7 1 2 3
+8 1 2 3 4 5 6 7 8 9
+9 1 2 3 4 5 6 7
+10 1 2 3 4 5 6 7 8 9 10
 
 Phase1 execution
-Line #1
+Line# 1
 
-Line #2
+Line# 2
 
-Line #3
+Line# 3
 
-Line #4
+Line# 4
 
-Line #7
+Line# 5
+
+Line# 6
+
+Line# 7
+
+Line# 8
+
+Line# 9
+
+Line# 10
 
 Phase2 execution
-Executed monster 5 from Line 2
-Executed monster 5 from Line 4
-Executed monster 7 from Line 4
-Executed monster 3 from Line 7
-Executed monster 5 from Line 7
-Executed monster 7 from Line 7
-Executed monster 1 from Line 1
-Executed monster 6 from Line 1
-Executed monster 1 from Line 3
+Executed Monster 10 from line 10
+Executed Monster 5 from line 4
+Executed Monster 5 from line 6
+Executed Monster 7 from line 6
+Executed Monster 4 from line 5
+Executed Monster 4 from line 10
+Executed Monster 3 from line 8
+Executed Monster 5 from line 8
+Executed Monster 7 from line 8
+Executed Monster 9 from line 8
+Executed Monster 1 from line 1
+Executed Monster 5 from line 1
+Executed Monster 1 from line 1
+Executed Monster 1 from line 2
+Executed Monster 1 from line 3
+Executed Monster 3 from line 3
+Executed Monster 1 from line 4
+Executed Monster 2 from line 4
+Executed Monster 1 from line 5
+Executed Monster 2 from line 5
+Executed Monster 1 from line 6
+Executed Monster 1 from line 7
+Executed Monster 2 from line 7
+Executed Monster 1 from line 9
+Executed Monster 4 from line 9
 
-Monster 1 from line 4 will survive
+Monster 5 from line 9 will survive

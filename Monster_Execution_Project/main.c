@@ -15,25 +15,25 @@ This program is written by: Rylan Simpson*/
 
 //Use enqueue, dequeue, peek, isEmpty function
 //Use monster* createMonster(int sequence)
-        //It takes an integer, dynamically allocate a monster structure and returns a monster node
+//It takes an integer, dynamically allocate a monster structure and returns a monster node
 //Use void createReverseCircle(queue *q)
-        /*It takes the reference of a queue, and creates a
-        circular singly linked list for that queue where the nodes contain sequence numbers in
-        reverse order . For example, if n=5 it should produce a circular singly linked list starting
-        from 5 and ending at 1 as sequence number. During this process, use the createMonster
-        function as well as enqueue() function to add the monster to the queue.*/
+/*It takes the reference of a queue, and creates a
+circular singly linked list for that queue where the nodes contain sequence numbers in
+reverse order . For example, if n=5 it should produce a circular singly linked list starting
+from 5 and ending at 1 as sequence number. During this process, use the createMonster
+function as well as enqueue() function to add the monster to the queue.*/
 //Use void rearrangeCircle(queue* q)
-        /*This function takes the reference of a queue and
-        reverse the given circular singly linked list where the first node of the linked list is
-        pointed by the front of the queue*/
+/*This function takes the reference of a queue and
+reverse the given circular singly linked list where the first node of the linked list is
+pointed by the front of the queue*/
 
 //void display(queue q)
-        //This function displays a given queue
+//This function displays a given queue
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "leak_detector_c.h"
+//#include "leak_detector_c.h"
 
 FILE* fileIn;
 FILE* fileOut;
@@ -97,7 +97,7 @@ Queue* rearrangeCircle(Queue* qPtr) {
 }
 
 //Verify if the node is circular
-    //Boolean can be changed back to int for returning 1 or 0, is boolean to ensure funcitonality
+//Boolean can be changed back to int for returning 1 or 0, is boolean to ensure funcitonality
 bool isCircular(Queue* qPtr) {
     //If empty return true
     if (qPtr->front == NULL)
@@ -249,7 +249,7 @@ Monster* removeMonster(Monster* position, int k) {
 
 
 int main(void){
-    atexit(report_mem_leak);
+    //atexit(report_mem_leak);
 
     fileIn = fopen("in.txt", "r");
     fileOut = fopen("out.txt", "w");
@@ -276,7 +276,7 @@ int main(void){
     }
 
     //Sink sort groups based on grounds number
-            //Use braces to make the created node pointer local
+    //Use braces to make the created node pointer local
     {
         Queue *sortTemp;
         for (int a = 0; a < numGroups; a++) {
@@ -343,7 +343,7 @@ int main(void){
     }
 
     //Re-sort each queue from low to high
-        //Use braces to make the created node pointer local
+    //Use braces to make the created node pointer local
     {
         Monster *sortCurrTemp;
         for (int x = 0; x < numGroups; x++) {
@@ -418,17 +418,17 @@ int main(void){
                     highest = peek(groups[t]);
                     highestIndex = t;
                 }
-                //Return same
+                    //Return same
                     //Maintain redundancy for insurance and debugging
                 else {
                     highest = groups[highestIndex]->front->sequenceNumber;
                     highestIndex = highestIndex;
                 }
             }
-            //If the highest marked group is lower than the currently inspected group
+                //If the highest marked group is lower than the currently inspected group
             else if (highest < groupSeqMatcher){
-               highest = peek(groups[t]);
-               highestIndex = t;
+                highest = peek(groups[t]);
+                highestIndex = t;
             }
             else if (highest > groupSeqMatcher){
                 //Proceed, current index is the lowest

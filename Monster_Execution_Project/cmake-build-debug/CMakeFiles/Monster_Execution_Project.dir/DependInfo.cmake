@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/rylan/OneDrive/Desktop/School/CCodes/Monster_Execution_Project/main.c" "C:/Users/rylan/OneDrive/Desktop/School/CCodes/Monster_Execution_Project/cmake-build-debug/CMakeFiles/Monster_Execution_Project.dir/main.c.obj"
+  "C:/Users/rylan/OneDrive/Desktop/School/CCodes/C_Code_Archive/Monster_Execution_Project/main.c" "C:/Users/rylan/OneDrive/Desktop/School/CCodes/C_Code_Archive/Monster_Execution_Project/cmake-build-debug/CMakeFiles/Monster_Execution_Project.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
