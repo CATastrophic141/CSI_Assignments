@@ -43,10 +43,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,15 +68,15 @@ include CMakeFiles/Monster_Execution_Project.dir/flags.make
 CMakeFiles/Monster_Execution_Project.dir/main.c.obj: CMakeFiles/Monster_Execution_Project.dir/flags.make
 CMakeFiles/Monster_Execution_Project.dir/main.c.obj: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Monster_Execution_Project.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Monster_Execution_Project.dir\main.c.obj -c C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\main.c
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\TOOLCH~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Monster_Execution_Project.dir\main.c.obj -c C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\main.c
 
 CMakeFiles/Monster_Execution_Project.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Monster_Execution_Project.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\main.c > CMakeFiles\Monster_Execution_Project.dir\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\TOOLCH~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\main.c > CMakeFiles\Monster_Execution_Project.dir\main.c.i
 
 CMakeFiles/Monster_Execution_Project.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Monster_Execution_Project.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\main.c -o CMakeFiles\Monster_Execution_Project.dir\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\TOOLCH~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rylan\OneDrive\Desktop\School\CCodes\C_Code_Archive\Monster_Execution_Project\main.c -o CMakeFiles\Monster_Execution_Project.dir\main.c.s
 
 # Object files for target Monster_Execution_Project
 Monster_Execution_Project_OBJECTS = \

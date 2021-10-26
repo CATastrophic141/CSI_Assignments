@@ -1,6 +1,11 @@
 /* COP 3502C Assignment 3
 This program is written by: Rylan Simpson*/
 
+/*
+ * CORRECTION OF THIS ASSIGNMENT HAS BEEN ABANDONED
+ * CERTAIN TEST CASES CAN CREATE SEG FAULTS
+ */
+
 /*Phase 1:
  * For every group g_i (g<=10)
  *         Until the number of remaining nodes reaches threshold th_i
