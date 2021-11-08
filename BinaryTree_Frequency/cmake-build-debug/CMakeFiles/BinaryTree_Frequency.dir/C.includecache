@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rylan/OneDrive/Desktop/School/CCodes/BinaryTree_Frequency/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
