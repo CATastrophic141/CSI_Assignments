@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rylan/OneDrive/Desktop/School/CCodes/C_Code_Archive/BookLibrary_Assignment/BookLibrary_MergeSort/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+
