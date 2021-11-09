@@ -4,6 +4,7 @@ This program is written by: Rylan Simpson */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "leak_detector_c.h"
 
 //File input and out
 FILE* in;
@@ -38,8 +39,10 @@ void mergeSortReverse(info* arr[], int l, int r);
 void freeBinaryTreeWithPostorder(node* root);
 
 int main() {
-    in = fopen("in.txt", "r");
-    out = fopen("out.txt", "w");
+    //atexit(report_mem_leak);
+
+    in = fopen("in3.txt", "r");
+    out = fopen("out3.txt", "w");
 
     //Get the total number of cases to run
     int totalCases;
@@ -80,13 +83,11 @@ int main() {
 
     }
 
-    //printf( "\n");
-
-    //Print tree with inorder, for debugging
+    //Print tree with inorder (Debugging)
 //       printInorder(root);
 //       printf("\n");
 
-    // PART 1 COMPLETED
+    // PART 1 COMPLETED //
 
     //Get size of tree
     int totalNumNodes = getTreeSize(root);
@@ -105,13 +106,13 @@ int main() {
     //Reset global index back to 0
     arrayIndex = 0;
 
-    //Print array, not sorted by frequency
+    //Print array, not sorted by frequency (Debugging)
 //    for (int i = 0; i < totalNumNodes; i++){
 //        printf("%s, ", nodeArray[i]->word);
 //    }
     //printf("\n\n");
 
-    // Part 2
+    // Part 2 //
 
     mergeSortReverse(nodeArray, 0, totalNumNodes-1);
 
