@@ -79,6 +79,7 @@ int main() {
             int wordDepth = getDepthOfNode(root, word, 0);
             fprintf(out, "%d\n", wordDepth);
             printf( "%d\n", wordDepth);
+            //Free malloced string that was not saved to a node
             free(word);
         }
 
@@ -105,8 +106,8 @@ int main() {
 
     int arrayIndex = 0;
 
+    //arrayIndex needs to be passed as a reference, so that the index can be properly updated during recursion
     copyToArrayInorder(root, nodeArray, &arrayIndex);
-    //Reset global index back to 0
 
     //Print array, not sorted by frequency (Debugging)
 //    for (int i = 0; i < totalNumNodes; i++){
