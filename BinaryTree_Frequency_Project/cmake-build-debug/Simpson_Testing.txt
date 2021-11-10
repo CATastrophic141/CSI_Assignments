@@ -1,0 +1,16 @@
+During the development of the program, structured tests were performed after each significant milestone of development.
+These milestones may be defined as the completion of a major funciton or "part" of the program.
+To test the success of the program during each testing iteration, both the CLion debugging tool and structured print statements
+	 were used to ensure that the program produced proper results.
+The CLion debugging tool allowed for step-by-step tracing of pointers, data structures, and variables.
+This allowed for the detection of errors and invalid results.
+The use of structured print statements allowed for more simple analysis of how the code stored and read data, and allowed for simple detection of error.
+After the completion and debugging of the program, four test files were used to ensure that the program worked correctly.
+The first file was the example input. The produced file was compared to the example output to ensure that the program did not have any major
+	 formatting mistakes or other errors.
+The second file was a wide-case file, with many varying calls to node additions and to queries. This file tests the program's ability to handle many various file inputs.
+	 This case tests the program's ability to handle varied input operations and varied input values.
+The third file was a tiebreaker testing file. The program will handle multiple inputs that will purposefully creates multiple tiebreakers.
+	 This case tests the program's ability to handle ties in the sorting of the program's data array.
+The fourth file is a full-null testing file. The program will handle multiple queries to a null root node.
+	 This case tests the program's robustness against a completely empty root node and repeated calls to informaiton that does not exist within the nonexistent tree.

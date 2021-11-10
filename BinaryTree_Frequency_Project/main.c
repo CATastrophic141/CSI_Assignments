@@ -10,6 +10,7 @@ This program is written by: Rylan Simpson */
 FILE* in;
 FILE* out;
 
+//Info structure
 typedef struct info {
     char* word;
     int freq;
@@ -23,7 +24,6 @@ typedef struct node {
 } node;
 
 //Set starting index for copying to zero
-int arrayIndex = 0;
 
 //Function prototypes
 node* createNode(char newWord[]);
@@ -32,17 +32,17 @@ int getTreeSize(node* root);
 int getDepthOfNode(node* root, char qWord[], int depth);
 int getFreqOfNode(node* root, char qWord[]);
 void printInorder(node* treeNode);
-void copyToArrayInorder(node* root, info* nodeArray[]);
+void copyToArrayInorder(node* root, info* nodeArray[], int *arrayIndex);
 int compareTo(info *data1, info *data2);
 void mergeReverse(info* arr[], int l, int m, int r);
 void mergeSortReverse(info* arr[], int l, int r);
 void freeBinaryTreeWithPostorder(node* root);
 
 int main() {
-    //atexit(report_mem_leak);
+    atexit(report_mem_leak);
 
-    in = fopen("in3.txt", "r");
-    out = fopen("out3.txt", "w");
+    in = fopen("in.txt", "r");
+    out = fopen("out.txt", "w");
 
     //Get the total number of cases to run
     int totalCases;
@@ -102,9 +102,10 @@ int main() {
         nodeArray[i] = NULL;
     }
 
-    copyToArrayInorder(root, nodeArray);
+    int arrayIndex = 0;
+
+    copyToArrayInorder(root, nodeArray, &arrayIndex);
     //Reset global index back to 0
-    arrayIndex = 0;
 
     //Print array, not sorted by frequency (Debugging)
 //    for (int i = 0; i < totalNumNodes; i++){
@@ -294,12 +295,15 @@ void printInorder(node* treeNode) {
     }
 }
 
-//arrayIndex is first passed as global 0
-void copyToArrayInorder(node* root, info* nodeArray[]){
+//Copy the information structs while traversing in pre-order form
+    //Pass arrayIndex *pointer* to ensure incremented value is kept
+    //Data will be sorted later by frequency
+void copyToArrayInorder(node* root, info* nodeArray[], int *arrayIndex){
     if (root != NULL) {
-        copyToArrayInorder(root->left, nodeArray);
-        nodeArray[arrayIndex++] = root->data;
-        copyToArrayInorder(root->right, nodeArray);
+        copyToArrayInorder(root->left, nodeArray, arrayIndex);
+        nodeArray[*arrayIndex] = root->data;
+        *arrayIndex = *arrayIndex + 1;
+        copyToArrayInorder(root->right, nodeArray, arrayIndex);
     }
 }
 
@@ -317,6 +321,7 @@ int compareTo(info *data1, info *data2) {
     }
 }
 
+//Sort in reverse order, prioritizing higher numbers
 void mergeReverse(info* arr[], int l, int m, int r) {
     int i, j, k;
     int lSize = m - l + 1;
@@ -399,7 +404,7 @@ void mergeSortReverse(info* arr[], int l, int r) {
     }
 }
 
-//arrayIndex is first passed as global 0
+//Free data structs and nodes together in postorder form
 void freeBinaryTreeWithPostorder(node* root){
     if (root != NULL) {
         freeBinaryTreeWithPostorder(root->left);
