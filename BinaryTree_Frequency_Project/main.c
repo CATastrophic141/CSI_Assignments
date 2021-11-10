@@ -69,7 +69,7 @@ int main() {
             node* newElement = createNode(word);
             root = insertNode(root, newElement);
         }
-        //If the option is 2, print the frequency of the word and the node depth
+            //If the option is 2, print the frequency of the word and the node depth
         else if (option == 2) {
             //Print word frequency
             int wordFreq = getFreqOfNode(root, word);
@@ -79,6 +79,7 @@ int main() {
             int wordDepth = getDepthOfNode(root, word, 0);
             fprintf(out, "%d\n", wordDepth);
             printf( "%d\n", wordDepth);
+            free(word);
         }
 
     }
@@ -129,13 +130,13 @@ int main() {
 //    }
 
 
-     //Print results of sorted array
-     for (int i = 0; i < totalNumNodes; i++){
-         printf("%s %d\n", nodeArray[i]->word, nodeArray[i]->freq);
-         fprintf(out,"%s %d\n", nodeArray[i]->word, nodeArray[i]->freq);
-     }
+    //Print results of sorted array
+    for (int i = 0; i < totalNumNodes; i++){
+        printf("%s %d\n", nodeArray[i]->word, nodeArray[i]->freq);
+        fprintf(out,"%s %d\n", nodeArray[i]->word, nodeArray[i]->freq);
+    }
 
-     //Free each node and its data struct
+    //Free each node and its data struct
     freeBinaryTreeWithPostorder(root);
 
     fclose(in);
@@ -162,7 +163,7 @@ node* insertNode(node* root, node* element) {
     if (root == NULL) {
         return element;
     }
-    //Else follow tree until place for element is found or until existing element is found
+        //Else follow tree until place for element is found or until existing element is found
     else {
 
         //If the element string is less than root string
@@ -171,27 +172,28 @@ node* insertNode(node* root, node* element) {
             if (root->left != NULL) {
                 insertNode(root->left, element);
             }
-            //Else if pointer is null, place element as leaf
+                //Else if pointer is null, place element as leaf
             else {
                 root->left = element;
             }
         }
-        //If the element string is greater than root string
+            //If the element string is greater than root string
         else if (strcmp(element->data->word, root->data->word) > 0) {
             //If right pointer is not null, continue going down tree
             if (root->right != NULL) {
                 insertNode(root->right, element);
             }
-            //Else if pointer is null, place element as leaf
+                //Else if pointer is null, place element as leaf
             else {
                 root->right = element;
             }
         }
-        //If string exists in tree
-        else if (strcmp(element->data->word, root->data->word) == 0) {
+            //If string exists in tree
+        else {
             //Increment frequency counter
             root->data->freq = root->data->freq + 1;
             //Free element node that was to be placed in tree
+            free(element->data->word);
             free(element->data);
             free(element);
         }
@@ -224,22 +226,22 @@ int getFreqOfNode(node* root, char qWord[]){
             if (root->left != NULL) {
                 return getFreqOfNode(root->left, qWord);
             }
-            //If pointer is null, return -1
+                //If pointer is null, return -1
             else {
                 return -1;
             }
         }
-        //If word is greater than root word, continue down tree
+            //If word is greater than root word, continue down tree
         else if (strcmp(qWord, root->data->word) > 0) {
             if (root->right != NULL) {
                 return getFreqOfNode(root->right, qWord);
             }
-            //If pointer is null, return -1
+                //If pointer is null, return -1
             else {
                 return -1;
             }
         }
-        //Else if comparator is 0, word is found
+            //Else if comparator is 0, word is found
         else {
             //Return the frequency of the word
             return root->data->freq;
@@ -296,8 +298,8 @@ void printInorder(node* treeNode) {
 }
 
 //Copy the information structs while traversing in pre-order form
-    //Pass arrayIndex *pointer* to ensure incremented value is kept
-    //Data will be sorted later by frequency
+//Pass arrayIndex *pointer* to ensure incremented value is kept
+//Data will be sorted later by frequency
 void copyToArrayInorder(node* root, info* nodeArray[], int *arrayIndex){
     if (root != NULL) {
         copyToArrayInorder(root->left, nodeArray, arrayIndex);
@@ -315,7 +317,7 @@ int compareTo(info *data1, info *data2) {
     if (strcmp(data1->word, data2->word) < 0){
         return 1;
     }
-    //If the first string is larger, x == 0 is impossible
+        //If the first string is larger, x == 0 is impossible
     else {
         return -1;
     }
@@ -354,7 +356,7 @@ void mergeReverse(info* arr[], int l, int m, int r) {
             j++;
             k++;
         }
-        //If a tie happens, compare strings
+            //If a tie happens, compare strings
         else {
             //If first string is smaller, merge it first
             if (compareTo(L[i], R[j]) == 1) {
@@ -362,13 +364,13 @@ void mergeReverse(info* arr[], int l, int m, int r) {
                 i++;
                 k++;
             }
-            //If first string is larger, merge second
+                //If first string is larger, merge second
             else if(compareTo(L[i], R[j]) == -1) {
                 arr[k] = R[j];
                 j++;
                 k++;
             }
-            //Catch erroneous bad results
+                //Catch erroneous bad results
             else {
                 printf("\n\n\nERROR OCCURRED IN MERGE\n\n\n");
                 exit(-420);
@@ -409,6 +411,7 @@ void freeBinaryTreeWithPostorder(node* root){
     if (root != NULL) {
         freeBinaryTreeWithPostorder(root->left);
         freeBinaryTreeWithPostorder(root->right);
+        free(root->data->word);
         free(root->data);
         free(root);
     }
