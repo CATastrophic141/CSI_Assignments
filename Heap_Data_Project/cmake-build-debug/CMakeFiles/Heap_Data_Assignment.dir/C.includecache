@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rylan/OneDrive/Desktop/School/CCodes/Heap_Data_Assignment/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
